@@ -35,7 +35,230 @@
       http://stajichlab.github.io/GenomeAnnotation
       
       ---
-      # Slide 1
+      # Genome As a Book
+
+      ```
+      CHAPTER V
+
+      That same evening there was an animated discussion among the squadron's
+      officers in Denisov's quarters.
+
+      "And I tell you, Rostov, that you must apologize to the colonel!" said a
+      tall, grizzly-haired staff captain, with enormous mustaches and many
+      wrinkles on his large features, to Rostov who was crimson with
+      excitement.
+
+      The staff captain, Kirsten, had twice been reduced to the ranks for
+      affairs of honor and had twice regained his commission.
+
+      "I will allow no one to call me a liar!" cried Rostov. "He told me I
+      lied, and I told him he lied. And there it rests. He may keep me on duty
+      every day, or may place me under arrest, but no one can make me
+      apologize, because if he, as commander of this regiment, thinks it
+      beneath his dignity to give me satisfaction, then..."
+
+      "You just wait a moment, my dear fellow, and listen," interrupted the
+      staff captain in his deep bass, calmly stroking his long mustache.
+      ```
+ 
+      ---
+      # No word boundaries it begins to be hard to read
+
+      ```
+      CHAPTERVThatsameeveningtherewasananimateddiscussionamongthesquadron'soffice
+      rsinDenisov'squarters."AndItellyou,Rostov,thatyoumustapologizetothecolonel!
+      "saidatall,grizzly-hairedstaffcaptain,withenormousmustachesandmanywrinkleso
+      nhislargefeatures,toRostovwhowascrimsonwithexcitement.Thestaffcaptain,Kirst
+      en,hadtwicebeenreducedtotheranksforaffairsofhonorandhadtwiceregainedhiscomm
+      ission."Iwillallownoonetocallmealiar!"criedRostov."HetoldmeIlied,andItoldhi
+      mhelied.Andthereitrests.Hemaykeepmeondutyeveryday,ormayplacemeunderarrest,b
+      utnoonecanmakemeapologize,becauseifhe,ascommanderofthisregiment,thinksitben
+      eathhisdignitytogivemesatisfaction,then...""Youjustwaitamoment,mydearfellow
+      ,andlisten,"interruptedthestaffcaptaininhisdeepbass,calmlystrokinghislongmu
+      stache.
+      ```
+ 
+      ---
+      # With no punctionation harder to read
+
+      ```
+      CHAPTERVThatsameeveningtherewasananimateddiscussionamongthesquadronsofficer
+      sinDenisovsquartersAndItellyouRostovthatyoumustapologizetothecolonelsaidata
+      llgrizzlyhairedstaffcaptainwithenormousmustachesandmanywrinklesonhislargefe
+      aturestoRostovwhowascrimsonwithexcitementThestaffcaptainKirstenhadtwicebeen
+      reducedtotheranksforaffairsofhonorandhadtwiceregainedhiscommissionIwillallo
+      wnoonetocallmealiarcriedRostovHetoldmeIliedandItoldhimheliedAndthereitrests
+      Hemaykeepmeondutyeverydayormayplacemeunderarrestbutnoonecanmakemeapologizeb
+      ecauseifheascommanderofthisregimentthinksitbeneathhisdignitytogivemesatisfa
+      ctionthenYoujustwaitamomentmydearfellowandlisteninterruptedthestaffcaptaini
+      nhisdeepbasscalmlystrokinghislongmustache
+      ```
+
+      ---
+      # No capitalization even harder to parse
+
+      ```
+      chaptervthatsameeveningtherewasananimateddiscussionamongthesquadronsofficers
+      indenisovsquartersanditellyourostovthatyoumustapologizetothecolonelsaidatall
+      grizzlyhairedstaffcaptainwithenormousmustachesandmanywrinklesonhislargefeatu
+      restorostovwhowascrimsonwithexcitementthestaffcaptainkirstenhadtwicebeenredu
+      cedtotheranksforaffairsofhonorandhadtwiceregainedhiscommissioniwillallownoon
+      etocallmealiarcriedrostovhetoldmeiliedanditoldhimheliedandthereitrestshemayk
+      eepmeondutyeverydayormayplacemeunderarrestbutnoonecanmakemeapologizebecausei
+      fheascommanderofthisregimentthinksitbeneathhisdignitytogivemesatisfactionthe
+      nyoujustwaitamomentmydearfellowandlisteninterruptedthestaffcaptaininhisdeepb
+      asscalmlystrokinghislongmustache
+      ```
+            
+      
+      ---
+      # Finding the words on the page
+
+      
+      __Helpful to have markings to know what are words, or where
+      words start or end.__
+
+      
+      ---
+      # Comparing texts to known words
+
+      Search a database of known words against our text might pick out
+      the word boundaries. Starting with most frequent words.
+
+      * and     22147   3.91%
+      * to      16713   2.95%
+      * of      14981   2.65%
+      * a       10509   1.86%
+      * he      9746    1.72%
+      * in      8786    1.55%
+      * his     7963    1.41%
+      * that    7794    1.38%
+      * was     7328    1.29%
+      * with    5691    1.00%
+      * had     5353    0.95%
+      * it      5143    0.91%
+      * her     4695    0.83%
+      * not     4655    0.82%
+      * him     4563    0.81%
+      
+      ---
+      # Frequency of words above certain length
+
+      * which   1996    1.24%   5
+      * prince  1879    1.17%   6
+      * pierre  1775    1.11%   6
+      * there   1453    0.90%   5
+      * their   1435    0.89%   5
+      * would   1362    0.85%   5
+      * could   1111    0.69%   5
+      * natasha 1089    0.68%   7
+      * andrew  1037    0.65%   6
+      * about   1016    0.63%   5
+      * himself 1005    0.63%   7
+      * princess        914     0.57%   8
+
+      ---
+      # Frequency of certain words
+
+      (order, word, number of times it appears, frequency)
+
+      * 2094	vodka	24	0.00%
+      * 1283	mustache	44	0.01%
+      * 3917	mustaches	11	0.00%
+      * 12159	mustached	1	0.00%
+      * 12320	blackmustached	1	0.00%
+      * 578	captain	113	0.02%
+      * 9497	captaincy	2	0.00%
+      * 9553	captains	2	0.00%
+
+
+      ---
+      # Using frequently occuring words
+
+      ***Match frequently occurring words back against the text to
+      pull out there incidence and annotate the region.***
+
+      ```
+      chaptervthatsameeveningtherewasananimateddiscussionamongthesquadronsofficers
+      indenisovsquartersanditellyourostovthatyoumustapologizetothecolonelsaidatall
+      grizzlyhairedstaffcaptainwithenormous [mustaches] andmanywrinklesonhislargefeatu
+      restorostovwhowascrimsonwithexcitementthestaffcaptainkirstenhadtwicebeenredu
+      cedtotheranksforaffairsofhonorandhadtwiceregainedhiscommissioniwillallownoon
+      etocallmealiarcriedrostovhetoldmeiliedanditoldhimheliedandthereitrestshemayk
+      eepmeondutyeverydayormayplacemeunderarrestbutnoonecanmakemeapologizebecausei
+      fheascommanderofthisregimentthinksitbeneathhisdignitytogivemesatisfactionthe
+      nyoujustwaitamomentmydearfellowandlisteninterruptedthestaffcaptaininhisdeepb
+      asscalmlystrokinghislong [mustache]
+
+      ```
+      
+      ---
+      # From frequencies to models
+
+      1. Development of a decoder for DNA into genes requires building
+      models of what is recognized by the transcription and
+      translation machinery
+      2. Data mining approach to develop statistical probabilities
+      about gene, exon length 
+      
+      ---
+      # Central Dogma
+
+      ![CentralDogma](img/centraldogma.gif)
+
+      ---
+      # Eukaryotic gene structure
+
+      ![EukGeneStructure](img/Gene_structure_eukaryote_2_annotated.svg.png)
+      
+      ---
+      # Patterns and rules in the data
+      
+      1. Codons are triplets of DNA letters.
+       - Coding regions should look different than non-coding regions
+      in frequency of 2-letter and 3-letter words
+      2. Coding region starts with ATG (AUG) and end with stop codon
+       (TAA TAG TGA)
+      3. Splice sites for Introns
+      
+
+      ---
+      # Ab initio gene finders
+
+      - Built on training sets of known genes
+      - Estimate frequencies of which of the 61 codons are used, and the transitions
+      between codons
+      - Incorporate splice site information to predict when exons end
+      and introns start
+      - Exon and intron length is also a parameter estiated from the
+      data
+      - Together these observed statistics can be parametrized into an
+      Hidden Markov Model
+      
+      ---
+      #Gene finding HMM
+
+      ![GlimmerHMM](img/GlimmerHMM_Fig3.gif)
+
+      ---
+      #Gene finding HMM
+
+      1. Each box is a particular state (e.g. Exon, Intron,
+      Intergenic)
+      2. From training data, estimate frequency which will jump to
+      gene start based on whether there is an ATG.
+      2. From training data, can estimate the frequency by which jump
+      to other states (e.g. from exon to intron) which are based on
+      the current base/codon frequency, the length of feature, and
+      window of sequence (are we near a likely splice site).
+      3. Overall consider all paths through the data (e.g. transitions
+      to consecutive states) but only keep the best scoring ones. 
+
+      ---
+      # Evidence based gene predictions
+
+      
+      
       
     </textarea>
     <script src="js/remark.js" type="text/javascript">
