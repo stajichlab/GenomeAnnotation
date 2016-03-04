@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="learning-goals">Learning Goals</h1>
+<ol type="1">
+<li>Run Tophat/Bowtie alignments of reads to see what are expressed regions</li>
+<li>Run EST/Transcripts to genome alignments to find genes</li>
+<li>Run protein to genome alignments to find genes</li>
+<li>Visualize these results in Browser (IGV)</li>
+</ol>
+<h1 id="running-rnaseq-alignments">Running RNASeq Alignments</h1>
+<ol type="1">
+<li><p>Download sequence for genome, proteins, and RNAs</p>
+<pre><code>wget http://stajichlab.github.io/GenomeAnnotation/data/locus.tar.gz</code></pre></li>
+<li><p>Uncompress the file</p>
+<pre><code>tar zxf locus.tar.gz  # uncompress the small dataset</code></pre></li>
+<li><p>Align the raw sequence reads against the genome locus with Bowtie/TopHat</p></li>
+</ol>
+<pre><code>   bowtie2-build locus.fa locus # index the database
+   tophat locus RNASeq_locusonly.3H.fq # run the search
+   samtools index tophat_out/accepted_hits.bam</code></pre>
+<ul>
+<li>Let's investigate that alignment file.</li>
+<li>Open IGV.</li>
+<li>Load locus.fa from the Genomes menu</li>
+<li>File - Load the tophat_out/accepted_hits.bam</li>
+<li>File - Load locus.fungidb.gff</li>
+</ul>
+<h1 id="aligning-ests-to-the-genome">Aligning ESTs to the genome</h1>
+<ol type="1">
+<li>Align ESTs to genome with exonerate</li>
+</ol>
+<pre><code> exonerate -m e2g ESTs.fa locus.fa --showtargetgff &gt; EST.aln.gff</code></pre>
+<ul>
+<li>Now load this GFF into IGV to visualize</li>
+</ul>
+<ol start="5" type="1">
+<li>Align proteins to genome with BLASTX</li>
+</ol>
+<pre><code>makeblastdb -in mory_proteins.fa -dbtype prot # format the db for BLAST
+blastx -query locus.fa -db mory_proteins.fa -outfmt 6  # run BLASTX to find homologs
+python blast2gff.py mory.BLASTX.tab BLASTX LGV_locus test &gt; mory_proteins.BLASTX.gff</code></pre>
+<ul>
+<li>Now load this GFF into IGV to visualize</li>
+</ul>
+<ol start="6" type="1">
+<li>Align proteins to genome with exonerate</li>
+</ol>
+<pre><code>exonerate  -m p2g  mory_proteins.fa locus.fa --showtargetgff &gt; mory_proteins.aln.gff</code></pre>
+<ul>
+<li>Now load this GFF into IGV to visualize</li>
+</ul>
+</body>
+</html>

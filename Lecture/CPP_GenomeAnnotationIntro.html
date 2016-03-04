@@ -273,6 +273,16 @@
       RNASeq data or full length transcripts
       3. Homology based prediction: Protein sequences either inferred from related species
       proteins, inferred from a translation of RNASeq/ESTs 
+
+      ---
+      # Generating evidence predictions
+      1. Need to align evidence to the genome
+      2. Use BLASTX initially to align protein to genome
+      3. But isn't splice-aware, need other tools which do this
+      4. Exonerate https://github.com/nathanweeks/exonerate is one
+      such tool
+      5. Exonerate can align protein to genome or EST/Transcript to genome. NOT
+      useful for all RNASeq results
       
       ---
       # Combining the evidence
@@ -280,7 +290,7 @@
       ![EviCombined](img/Yandell_Fig2.png)
       
       ---
-      # Good ene combiners
+      # Good evidence combiners
       1. EVM - Evidence Modeler - https://evidencemodeler.github.io/
       2. JIGSAW - https://ccb.jhu.edu/software/jigsaw/
       3. MAKER - http://www.yandell-lab.org/software/maker.html
@@ -320,8 +330,18 @@
       http://dx.doi.org/10.1002/0471250953.bi0411s48 http://www.yandell-lab.org/publications/pdf/maker_current_protocols.pdf
       Yandel and Ence Beginner's guide to Genome annotation
       - http://dx.doi.org/10.1038/nrg3174
-      
+            
 
+      ---
+      # Aligning reads
+
+      ---
+      # Aligning proteins
+
+      1. BLASTX of proteins to the genome
+      ```
+      blastx -query file -db db
+      ```
       
     </textarea>
     <script src="js/remark.js" type="text/javascript">
