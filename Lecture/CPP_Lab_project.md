@@ -55,7 +55,7 @@ Aligning Proteins to the genome
 
 ```
 makeblastdb -in mory_proteins.fa -dbtype prot # format the db for BLAST
-blastx -query locus.fa -db mory_proteins.fa -outfmt 6 -evalue 1e-4  # run BLASTX to find homologs
+blastx -query locus.fa -db mory_proteins.fa -outfmt 6 -evalue 1e-4  > mory.BLASTX.tab # run BLASTX to find homologs
 python blast2gff.py mory.BLASTX.tab BLASTX LGV_locus test > mory_proteins.BLASTX.gff
 ```
 * Now load this GFF into IGV to visualize
