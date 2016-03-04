@@ -198,8 +198,12 @@
       1. Development of a decoder for DNA into genes requires building
       models of what is recognized by the transcription and
       translation machinery
+      
       2. Data mining approach to develop statistical probabilities
-      about gene, exon length 
+      about gene, exon length, sequence bias at single, doublet, or
+      triplet nucleotides
+
+      3. 
       
       ---
       # Central Dogma
@@ -210,7 +214,13 @@
       # Eukaryotic gene structure
 
       ![EukGeneStructure](img/Gene_structure_eukaryote_2_annotated.svg.png)
-      
+
+      ---
+      # Genome size
+      ![GenomeSizeGeneCount](img/Yandell_Fig1.png)
+
+      Yandell and Ence 2012, Nat Rev Genetics
+
       ---
       # Patterns and rules in the data
       
@@ -220,7 +230,7 @@
       2. Coding region starts with ATG (AUG) and end with stop codon
        (TAA TAG TGA)
       3. Splice sites for Introns
-      
+     
 
       ---
       # Ab initio gene finders
@@ -241,7 +251,7 @@
       ![GlimmerHMM](img/GlimmerHMM_Fig3.gif)
 
       ---
-      #Gene finding HMM
+      # Ab initio Gene finding HMM
 
       1. Each box is a particular state (e.g. Exon, Intron,
       Intergenic)
@@ -259,12 +269,59 @@
 
       1. Generate alignments of experimental sequence data to the
       genomic locus
-      2. Could be Expressed Sequence Tags (ESTs) or more commonly now
+      2. Transcript support: Expressed Sequence Tags (ESTs) or more commonly now
       RNASeq data or full length transcripts
-      3. Also protein sequences - either inferred from related species
+      3. Homology based prediction: Protein sequences either inferred from related species
       proteins, inferred from a translation of RNASeq/ESTs 
       
+      ---
+      # Combining the evidence
+
+      ![EviCombined](img/Yandell_Fig2.png)
       
+      ---
+      # Good ene combiners
+      1. EVM - Evidence Modeler - https://evidencemodeler.github.io/
+      2. JIGSAW - https://ccb.jhu.edu/software/jigsaw/
+      3. MAKER - http://www.yandell-lab.org/software/maker.html
+
+      These tools combine the evidence data and predict the gene path
+      that maximizes some scoring function. 
+      
+      ---
+      #Some of best ''ab initio'' predictors
+      ![EGASP](img/EGASP_Fig6a.png)
+      1. Augustus - http://bioinf.uni-greifswald.de/augustus/
+      2. Genemark.HMM - http://exon.gatech.edu/GeneMark/
+      3. SNAP - http://korflab.ucdavis.edu/software.html
+
+      EGASP: the human ENCODE Genome Annotation Assessment
+      Project. Genome Biol. 2006;7 Suppl 1:S2.1-31
+      ---
+      # EGASP - breakdown of predictors
+      
+      ![EGASP](img/EGASP_Fig6b.png)
+
+      ---
+      # Putting the pieces together
+
+      ![MAKER](img/MAKER_Apollo_view.jpg)
+
+      ---
+      # MAKER scoring gene models
+
+      Maker scores a gene model based on the evidence which supports
+      it.  The score is called AED or Annotation Edit Distance. The
+      lower this number, the closer the evidence is to the final gene
+      model
+
+      Tutorials -
+      Campbell et al. Genome annotation with MAKER. -
+      http://dx.doi.org/10.1002/0471250953.bi0411s48 http://www.yandell-lab.org/publications/pdf/maker_current_protocols.pdf
+      Yandel and Ence Beginner's guide to Genome annotation
+      - http://dx.doi.org/10.1038/nrg3174
+      
+
       
     </textarea>
     <script src="js/remark.js" type="text/javascript">
