@@ -333,16 +333,127 @@
             
 
       ---
-      # Aligning reads
+      # Aligning short sequencing reads
 
+      Reads are aligned to the genome with tools such as Bowtie,
+      Tophat, BWA.
+
+      Tophat is useful for spliced RNAseq data as it can handle
+      introns properly.  
+
+      Some of these approaches will be obselete when long sequencing
+      reads are the norm (e.g. PacBio, Nanopore)
+
+      ---
+      # Steps for running Tophat
+
+      * Construct a genomic database and index it
+      * Usually a FASTA file format
+      * Run
+      ```
+      bowtie-index FASTAFILE GENOMENAME
+      ```
+      or
+      ```
+      bowtie2-index FASTAFILE GENOMENAME
+      ```
+      * Run tophat (there are many options)
+      ```
+      tophat GENOME file-withreads.fastq/fasta
+      ```
+      * Generates a BAM file (alignment) - can view this file with
+      ```
+      samtools view tophat_out/accepted_hits.bam | more
+      1:4:4288:116769:Y	16	NcraOR74A_LGV:4113800..4140899	454
+      50	50M *	0	0	TTTCTTAGCTTCAAAGTTCCTCCGAAC
+      CCCAGGCTCTGTCGAGCTCGTTT	HHHHFHEHHFHHHHHHHHHHHHHHHFHHHHHHHHH
+      HHHHHHHHHHHHHH      
+      ```
       ---
       # Aligning proteins
 
-      1. BLASTX of proteins to the genome
+      * BLASTX of proteins to the genome
       ```
-      blastx -query file -db db
+      blastx -query file -db db -outfmt 6 -out results.BLASTX.tab
       ```
+      * Results look like
+      ```
+      # TBLASTN 2.2.31+
+      # Query: MGG_06016 | organism=Magnaporthe_oryzae_70-15 | product=conserved hypothetical protein | location=Mory70-15_SC24:706815-710252(+) | length=1080 | sequence_SO=supercontig | SO=protein_coding
+      # Database: locus.fa
+      # Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+      # 2 hits found
+      MGG_06016       NcraOR74A_LGV_4113800_4140899   52.01   596     267     6       224     809     6014    7774    2e-170  551
+      MGG_06016       NcraOR74A_LGV_4113800_4140899   49.09   275     129     5       809     1079    7958    8761    4e-54   197
+      ```
+      ---
+      # Aligning with splice aware information
       
+      * Exonerate is tool that can align proteins but knows where
+
+      ```
+      exonerate -m p2g -q MGG_06016 -t locus.fa 
+      Command line: [exonerate -m p2g -q MGG_06016 -t locus.fa]
+      Hostname: [ZygoAir]
+
+      C4 Alignment:
+      ------------
+         Query: MGG_06016 | organism=Magnaporthe_oryzae_70-15 | product=conserved hypothetical protein | location=Mory70-15_SC24:706815-710252(+) | length=1080 | sequence_SO=supercontig | SO=protein_coding
+        Target: NcraOR74A_LGV_4113800_4140899
+         Model: protein2genome:local
+      Raw score: 1034
+      Query range: 591 -> 999
+      Target range: 7126 -> 8536
+
+      592 :  ArgMetSerGlnSerLeuSerLeuSerArgSerArgMetLeuValProAlaAlaProArgIl :  612
+             :::.........   ||||||::::::||||||:::   |||...      |||   :::
+             LysPheGlyAsnProLeuSerMetAlaArgSerGlnAlaLeuThr---LeuAlaSerGlnSe
+      7127 : aagtttgggaacccgctctccatggcccgctcacaagcccttaca---ttggcctcacagtc : 7184      
+      ```
+
+      ---
+      #Exonerate generating GFF
+
+      ```
+      exonerate -m p2g -q MGG_06016 -t locus.fa  --showtargetgff
+      Nc   exonerate  gene    7127    8536    1034    +       .       gene_id 1 ; sequence MGG_06016 ; gene_orientation +
+      Nc   exonerate  cds     7127    7774    .       +       .
+      Nc   exonerate  exon    7127    7774    .       +       .       insertions 0 ; deletions 2
+      Nc   exonerate  splice5 7775    7776    .       +       .       intron_id 1 ; splice_site "gt"
+      Nc   exonerate  intron  7775    7960    .       +       .       intron_id 1
+      Nc   exonerate  splice3 7959    7960    .       +       .       intron_id 0 ; splice_site "ag"
+      Nc   exonerate  cds     7961    8536    .       +       .
+      Nc   exonerate  exon    7961    8536    .       +       .       insertions 9 ; deletions 1
+      ```
+
+      Without long lines so you can see extra info
+      ```
+      Nc   exonerate  gene    7127    8536    1034   gene_orientation +
+      Nc   exonerate  cds     7127    7774    
+      Nc   exonerate  exon    7127    7774    insertions 0 ; deletions 2
+      Nc   exonerate  splice5 7775    7776    intron_id 1 ; splice_site "gt"
+      Nc   exonerate  intron  7775    7960    intron_id 1
+      Nc   exonerate  splice3 7959    7960    intron_id 0 ; splice_site "ag"
+      Nc   exonerate  cds     7961    8536    
+      Nc   exonerate  exon    7961    8536    insertions 9 ; deletions 1
+      ```
+
+      ---
+      #Other types of genes
+
+      * Non-protein coding genes are also in genomes      
+      * tRNA, snoRNA using structural information http://lowelab.ucsc.edu/tRNAscan-SE/      
+      * miRNA from sequence identity usually
+
+      ![tRNA](img/tRNA_scan.png)
+      
+      ---
+      # Genome annotation summmary
+
+      * Overall automated tools to identify coding gene regions in
+      genomes
+      * Using prediction software and evidence based models
+
     </textarea>
     <script src="js/remark.js" type="text/javascript">
     </script>
