@@ -18,6 +18,8 @@
 <li>Run protein to genome alignments to find genes</li>
 <li>Visualize these results in Browser (IGV)</li>
 </ol>
+<p>Let's fix our paths on CPP system</p>
+<pre><code>export PATH=$PATH:/apps/tophat:/apps/bowtie:/apps/cufflinks:/apps/blast/bin:/apps/exonerate/bin:/apps/java:/apps/IGV</code></pre>
 <h1 id="running-rnaseq-alignments">Running RNASeq Alignments</h1>
 <ol type="1">
 <li><p>Download sequence for genome, proteins, and RNAs</p>
@@ -28,10 +30,11 @@
 </ol>
 <pre><code>   bowtie2-build locus.fa locus # index the database
    tophat locus RNASeq_locusonly.3H.fq # run the search
-   samtools index tophat_out/accepted_hits.bam</code></pre>
+   # on CPP system samtools is samtools_0.1.18 otherwise use samtools
+   samtools_0.1.18 index tophat_out/accepted_hits.bam</code></pre>
 <ul>
 <li>Let's investigate that alignment file.</li>
-<li>Open IGV.</li>
+<li>Open IGV. - use igv.sh</li>
 <li>Load locus.fa from the Genomes menu</li>
 <li>File - Load the tophat_out/accepted_hits.bam</li>
 <li>File - Load locus.fungidb.gff</li>
@@ -49,7 +52,7 @@
 <li>Align proteins to genome with BLASTX</li>
 </ol>
 <pre><code>makeblastdb -in mory_proteins.fa -dbtype prot # format the db for BLAST
-blastx -query locus.fa -db mory_proteins.fa -outfmt 6  # run BLASTX to find homologs
+blastx -query locus.fa -db mory_proteins.fa -outfmt 6 -evalue 1e-4  # run BLASTX to find homologs
 python blast2gff.py mory.BLASTX.tab BLASTX LGV_locus test &gt; mory_proteins.BLASTX.gff</code></pre>
 <ul>
 <li>Now load this GFF into IGV to visualize</li>

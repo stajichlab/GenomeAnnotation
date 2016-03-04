@@ -7,6 +7,11 @@ Learning Goals
 4. Visualize these results in Browser (IGV)
 
 
+Let's fix our paths on CPP system
+```
+export PATH=$PATH:/apps/tophat:/apps/bowtie:/apps/cufflinks:/apps/blast/bin:/apps/exonerate/bin:/apps/java:/apps/IGV
+```
+
 Running RNASeq Alignments
 =========================
 
@@ -24,11 +29,12 @@ tar zxf locus.tar.gz  # uncompress the small dataset
 ```
    bowtie2-build locus.fa locus # index the database
    tophat locus RNASeq_locusonly.3H.fq # run the search
-   samtools index tophat_out/accepted_hits.bam
+   # on CPP system samtools is samtools_0.1.18 otherwise use samtools
+   samtools_0.1.18 index tophat_out/accepted_hits.bam
 ```
 
 * Let's investigate that alignment file.
-  * Open IGV.
+  * Open IGV. - use igv.sh
   * Load locus.fa from the Genomes menu
   * File - Load the tophat_out/accepted_hits.bam
   * File - Load locus.fungidb.gff
