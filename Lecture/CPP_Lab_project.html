@@ -44,6 +44,7 @@
 <ul>
 <li>Now load this GFF into IGV to visualize</li>
 </ul>
+<h1 id="aligning-proteins-to-the-genome">Aligning Proteins to the genome</h1>
 <ol start="5" type="1">
 <li>Align proteins to genome with BLASTX</li>
 </ol>
@@ -60,5 +61,24 @@ python blast2gff.py mory.BLASTX.tab BLASTX LGV_locus test &gt; mory_proteins.BLA
 <ul>
 <li>Now load this GFF into IGV to visualize</li>
 </ul>
+<h1 id="practice-with-larger-datasets">Practice with larger datasets</h1>
+<pre><code>wget  http://stajichlab.github.io/GenomeAnnotation/data/big.tgz
+tar zxf big.tgz
+wget http://www.fungidb.org/common/downloads/Current_Release/Fgraminearum_PH-1/fasta/data/FungiDB-27_Fgraminearum_PH-1_AnnotatedProteins.fasta</code></pre>
+<ol type="1">
+<li>Look in the new folder 'big'</li>
+<li>there is a whole chromosome file now NcraOR74A_LGV.fa; Index this with bowtie2-build and run tophat</li>
+<li>Use this file Ncra3H_ChrV_reads.fastq to align to the genome with tophat.</li>
+<li>Load your new aligned bamfile reads (Step 3) and the genes in Ncra_OR74A_LGV.genes.gff</li>
+<li>Use this file Nc5H-Trinity.fasta to align transcripts to the chromosome with exonerate</li>
+<li>Load the chromosome NcraOR74A_LGV.fa into IGV and load its annotations NcraOR74A_LGV.genes.gff</li>
+<li>Use the downloaded file from another genome FungiDB-27_Fgraminearum_PH-1_AnnotatedProteins.fasta to align proteins to this chromosome with BLASTX</li>
+</ol>
+<ul>
+<li>You can try to run exonerate but it works better if you already have a subset of proteins that align to this chromosome as exonerate will try to align all proteins in the file (will take a while).</li>
+</ul>
+<ol start="8" type="1">
+<li>Load some of the alignments into IGV if you get it to work</li>
+</ol>
 </body>
 </html>
