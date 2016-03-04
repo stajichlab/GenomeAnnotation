@@ -1,0 +1,56 @@
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	415	4956	.	+	.	ID=NCU06648;Name=NCU06648;description=polarized+growth+protein+Boi2;size=4542;web_id=NCU06648;locus_tag=NCU06648;size=4542;Alias=NCU06648,18307433,Q7S7I3,3877019
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	415	4956	.	+	.	ID=rna_NCU06648-1;Name=NCU06648-1;description=NCU06648-1;size=4542;Parent=NCU06648;Ontology_term=GO:0005515,GO:0005543;Dbxref=taxon:367110,NCBI_gi:18307433,FungiDB:NCU06648
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	1933	4569	.	+	1	ID=cds_NCU06648-3;Name=cds;description=.;size=3026;Parent=rna_NCU06648-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	1697	1838	.	+	2	ID=cds_NCU06648-2;Name=cds;description=.;size=144;Parent=rna_NCU06648-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	1429	1483	.	+	0	ID=cds_NCU06648-1;Name=cds;description=.;size=1069;Parent=rna_NCU06648-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	415	1483	.	+	.	ID=exon_NCU06648-1;Name=exon;description=exon;size=1069;Parent=rna_NCU06648-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	1695	1838	.	+	.	ID=exon_NCU06648-2;Name=exon;description=exon;size=144;Parent=rna_NCU06648-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	1931	4956	.	+	.	ID=exon_NCU06648-3;Name=exon;description=exon;size=3026;Parent=rna_NCU06648-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	5218	9001	.	+	.	ID=NCU06649;Name=NCU06649;description=hypothetical+protein;size=3784;web_id=NCU06649;locus_tag=NCU06649;size=3784;Alias=Q7S7I2,18307434,NCU06649,3877020
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	5218	9001	.	+	.	ID=rna_NCU06649-1;Name=NCU06649-1;description=NCU06649-1;size=3784;Parent=NCU06649;Dbxref=taxon:367110,NCBI_gi:18307434,FungiDB:NCU06649
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	7832	8767	.	+	0	ID=cds_NCU06649-2;Name=cds;description=.;size=1170;Parent=rna_NCU06649-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	5678	7774	.	+	0	ID=cds_NCU06649-1;Name=cds;description=.;size=2557;Parent=rna_NCU06649-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	5218	7774	.	+	.	ID=exon_NCU06649-1;Name=exon;description=exon;size=2557;Parent=rna_NCU06649-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	7832	9001	.	+	.	ID=exon_NCU06649-2;Name=exon;description=exon;size=1170;Parent=rna_NCU06649-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	9266	10181	.	-	.	ID=NCU06650;Name=NCU06650;description=secretory+phospholipase+A2+%28secretory+pathway+protein-3%29;size=916;web_id=NCU06650;locus_tag=NCU06650;size=916;Alias=NCU06650,spp-3,85099990,Q1K6W0,3877021,28922413,18307435,secretory pathway protein-3
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	9266	10181	.	-	.	ID=rna_NCU06650-1;Name=NCU06650-1;description=NCU06650-1;size=916;Parent=NCU06650;Dbxref=taxon:367110,NCBI_gi:85099990,NCBI_gi:18307435,NCBI_gi:28922413,FungiDB:NCU06650
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	9376	9567	.	-	1	ID=cds_NCU06650-2;Name=cds;description=.;size=303;Parent=rna_NCU06650-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	9776	10140	.	-	0	ID=cds_NCU06650-1;Name=cds;description=.;size=406;Parent=rna_NCU06650-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	9776	10181	.	-	.	ID=exon_NCU06650-1;Name=exon;description=exon;size=406;Parent=rna_NCU06650-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	9266	9568	.	-	.	ID=exon_NCU06650-2;Name=exon;description=exon;size=303;Parent=rna_NCU06650-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	12342	13882	.	-	.	ID=NCU06651;Name=NCU06651;description=AN1-type+zinc+finger+protein+%28zinc+finger+transcription+factor-3%29;size=1541;web_id=NCU06651;locus_tag=NCU06651;size=1541;Alias=znf-3,zinc finger transcription factor-3,18307436,3876844,Q1K6M9,85098978,350294298,NCU06651,28922213,336472476
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	12342	13882	.	-	.	ID=rna_NCU06651-1;Name=NCU06651-1;description=NCU06651-1;size=1541;Parent=NCU06651;Ontology_term=GO:0008270;Dbxref=taxon:367110,NCBI_gi:85098978,NCBI_gi:18307436,NCBI_gi:28922213,NCBI_gi:336472476,NCBI_gi:350294298,FungiDB:NCU06651
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	13158	13232	.	-	0	ID=cds_NCU06651-2;Name=cds;description=.;size=891;Parent=rna_NCU06651-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	13331	13477	.	-	0	ID=cds_NCU06651-1;Name=cds;description=.;size=552;Parent=rna_NCU06651-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	13331	13882	.	-	.	ID=exon_NCU06651-1;Name=exon;description=exon;size=552;Parent=rna_NCU06651-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	12342	13232	.	-	.	ID=exon_NCU06651-2;Name=exon;description=exon;size=891;Parent=rna_NCU06651-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	17012	19274	.	-	.	ID=NCU06652;Name=NCU06652;description=S-%28hydroxymethyl%29glutathione+dehydrogenase+%28hydroxymethylglutathione+dehydrogenase-2%29;size=2263;web_id=NCU06652;locus_tag=NCU06652;size=2263;Alias=Q1K6M8,3876845,28922214,NCU06652,hydroxymethylglutathione dehydrogenase-2,hgd-2,18307437,85098982
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	17012	19274	.	-	.	ID=rna_NCU06652-1;Name=NCU06652-1;description=NCU06652-1;size=2263;Parent=NCU06652;Ontology_term=GO:0006069,GO:0055114,GO:0008270,GO:0016491,GO:0016747,GO:0051903;Dbxref=taxon:367110,EC:1.1.1.1,NCBI_gi:85098982,NCBI_gi:18307437,NCBI_gi:28922214,FungiDB:NCU06652
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	17428	17640	.	-	1	ID=cds_NCU06652-4;Name=cds;description=.;size=631;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	17722	18496	.	-	2	ID=cds_NCU06652-3;Name=cds;description=.;size=777;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	18597	18726	.	-	0	ID=cds_NCU06652-2;Name=cds;description=.;size=130;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	18911	18931	.	-	0	ID=cds_NCU06652-1;Name=cds;description=.;size=364;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	18911	19274	.	-	.	ID=exon_NCU06652-1;Name=exon;description=exon;size=364;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	18597	18726	.	-	.	ID=exon_NCU06652-2;Name=exon;description=exon;size=130;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	17722	18498	.	-	.	ID=exon_NCU06652-3;Name=exon;description=exon;size=777;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	17012	17642	.	-	.	ID=exon_NCU06652-4;Name=exon;description=exon;size=631;Parent=rna_NCU06652-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	20553	21400	.	+	.	ID=NCU06653;Name=NCU06653;description=hypothetical+protein;size=848;web_id=NCU06653;locus_tag=NCU06653;size=848;Alias=Q7S7A8,NCU06653,3876846
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	20553	21400	.	+	.	ID=rna_NCU06653-1;Name=NCU06653-1;description=NCU06653-1;size=848;Parent=NCU06653;Dbxref=taxon:367110,FungiDB:NCU06653
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	20926	21171	.	+	0	ID=cds_NCU06653-2;Name=cds;description=.;size=475;Parent=rna_NCU06653-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	20714	20860	.	+	0	ID=cds_NCU06653-1;Name=cds;description=.;size=308;Parent=rna_NCU06653-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	20553	20860	.	+	.	ID=exon_NCU06653-1;Name=exon;description=exon;size=308;Parent=rna_NCU06653-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	20926	21400	.	+	.	ID=exon_NCU06653-2;Name=exon;description=exon;size=475;Parent=rna_NCU06653-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	21267	24099	.	-	.	ID=NCU06654;Name=NCU06654;description=DNA+repair+protein+Ntg1+%28DNA+repair-16%29;size=2833;web_id=NCU06654;locus_tag=NCU06654;size=2833;Alias=NCU06654,18307439,dnr-16,DNA repair-16,Q1K6M7,3876847
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	21267	24099	.	-	.	ID=rna_NCU06654-1;Name=NCU06654-1;description=NCU06654-1;size=2833;Parent=NCU06654;Ontology_term=GO:0006281,GO:0006284,GO:0003677,GO:0003824;Dbxref=taxon:367110,EC:4.2.99.18,NCBI_gi:18307439,FungiDB:NCU06654
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	21377	22954	.	-	1	ID=cds_NCU06654-2;Name=cds;description=.;size=1689;Parent=rna_NCU06654-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	23015	23943	.	-	0	ID=cds_NCU06654-1;Name=cds;description=.;size=1085;Parent=rna_NCU06654-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	23015	24099	.	-	.	ID=exon_NCU06654-1;Name=exon;description=exon;size=1085;Parent=rna_NCU06654-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	21267	22955	.	-	.	ID=exon_NCU06654-2;Name=exon;description=exon;size=1689;Parent=rna_NCU06654-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	gene	24480	26939	.	-	.	ID=NCU06655;Name=NCU06655;description=lipid+particle+protein;size=2460;web_id=NCU06655;locus_tag=NCU06655;size=2460;Alias=28922217,85098994,NCU06655,3876848,18307440,Q1K6M6
+NcraOR74A_LGV_4113800_4140899	FungiDB	mRNA	24480	26939	.	-	.	ID=rna_NCU06655-1;Name=NCU06655-1;description=NCU06655-1;size=2460;Parent=NCU06655;Dbxref=taxon:367110,EC:3.1.-.-,NCBI_gi:85098994,NCBI_gi:18307440,NCBI_gi:28922217,FungiDB:NCU06655
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	24651	25601	.	-	0	ID=cds_NCU06655-3;Name=cds;description=.;size=1122;Parent=rna_NCU06655-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	25691	25990	.	-	0	ID=cds_NCU06655-2;Name=cds;description=.;size=300;Parent=rna_NCU06655-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	CDS	26108	26167	.	-	0	ID=cds_NCU06655-1;Name=cds;description=.;size=832;Parent=rna_NCU06655-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	26108	26939	.	-	.	ID=exon_NCU06655-1;Name=exon;description=exon;size=832;Parent=rna_NCU06655-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	25691	25990	.	-	.	ID=exon_NCU06655-2;Name=exon;description=exon;size=300;Parent=rna_NCU06655-1
+NcraOR74A_LGV_4113800_4140899	FungiDB	exon	24480	25601	.	-	.	ID=exon_NCU06655-3;Name=exon;description=exon;size=1122;Parent=rna_NCU06655-1
